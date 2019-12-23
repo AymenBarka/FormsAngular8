@@ -40,13 +40,9 @@ export class TodosComponent implements OnInit {
         this.formulaire.push({ title: this.title ,first: this.firstName, last: this.lastName, email: this.email, password:this.password,confirm: this.confirmPassword,});
         localStorage.setItem('formulaire', JSON.stringify(this.formulaire));
       }
-      //stop here if form is invalid
       if (this.registerForm.invalid) {
          return;
      }
-
-      // display form values on success
-     // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
   }
 
   getInformation() {
